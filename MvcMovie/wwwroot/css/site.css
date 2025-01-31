@@ -1,0 +1,112 @@
+/* Font size adjustments for responsiveness */
+html {
+    font-size: 14px;
+    background-color: #1D1616; /* Dark background color */
+    color: #FFFFFF; /* White text */
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* Button focus and active focus styling */
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem #FFFFFF, 0 0 0 0.25rem #8E1616; /* White inner shadow, red outer shadow */
+    outline: none;
+}
+
+/* Ensure the page fills the screen */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #1D1616; /* Dark background color */
+    color: #FFFFFF; /* White text for readability */
+    font-family: Arial, sans-serif; /* Clean, sans-serif font */
+}
+
+/* Floating form placeholder styling */
+.form-floating > .form-control-plaintext::placeholder,
+.form-floating > .form-control::placeholder {
+    color: #D84040; /* Vibrant red for placeholders */
+    text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder,
+.form-floating > .form-control:focus::placeholder {
+    text-align: start;
+}
+
+/* Additions for consistency with the theme */
+/* Links */
+a {
+    color: #D84040; /* Vibrant red for links */
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+        color: #8E1616; /* Darker red on hover */
+    }
+
+/* General box styling */
+.box {
+    border: 4px solid #8E1616; /* Dark red border */
+    background-color: #D84040; /* Red fill */
+    color: #FFFFFF; /* White text */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+/* Responsive typography */
+h1, h2, h3, h4, h5, h6 {
+    color: #D84040; /* Vibrant red for headings */
+}
+
+p {
+    color: #FFFFFF; /* Ensure readability */
+    line-height: 1.5;
+}
+
+/* Gallery Roll Styling */
+.gallery-roll {
+    display: flex; /* Use Flexbox for horizontal layout */
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+    gap: 10px; /* Space between images */
+    padding: 10px;
+    scrollbar-width: thin; /* For better scrollbar styling in some browsers */
+    scrollbar-color: #D84040 #1D1616; /* Custom scrollbar colors */
+}
+
+.gallery-item {
+    width: 150px; /* Fixed width for each image */
+    height: 100px; /* Fixed height for each image */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for depth */
+    flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+/* Custom scrollbar styling for WebKit browsers */
+.gallery-roll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.gallery-roll::-webkit-scrollbar-thumb {
+    background-color: #D84040; /* Scrollbar thumb color */
+    border-radius: 4px;
+}
+
+.gallery-roll::-webkit-scrollbar-track {
+    background-color: #1D1616; /* Scrollbar track color */
+}
